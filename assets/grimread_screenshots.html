@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrimRead — CodeCanyon Screenshots</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:#080608; --void:#0D0A0F; --deep:#120E16; --shadow:#1A1320;
+  --stone:#221929; --ash:#2E2238; --smoke:#3D3150; --mist:#54436A;
+  --dust:#7A6892; --pale:#A89CBD; --bone:#D4C8E0; --parchment:#E8DFC8;
+  --blood:#8B1A1A; --crimson:#B22020; --scarlet:#CC3030;
+  --gold:#C8A040; --tarnished:#8A6C28; --copper:#A07030;
+  --rune:'UnifrakturMaguntia',cursive;
+  --cinzel:'Cinzel',serif;
+  --cdeco:'Cinzel Decorative',serif;
+  --fell:'IM Fell English',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#050305;font-family:var(--fell);min-height:100vh;padding:40px 20px;}
+
+/* ── PAGE LAYOUT ── */
+.page{max-width:1440px;margin:0 auto;}
+.page-title{
+  font-family:var(--rune);font-size:52px;color:var(--gold);text-align:center;
+  text-shadow:0 0 30px rgba(200,160,64,.35);letter-spacing:3px;
+  margin-bottom:8px;
+}
+.page-sub{
+  font-family:var(--cinzel);font-size:10px;letter-spacing:4px;color:var(--dust);
+  text-align:center;text-transform:uppercase;margin-bottom:48px;
+}
+
+/* ── SCREENSHOT GRID ── */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:48px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:48px;}
+
+/* ── PHONE FRAME ── */
+.phone-wrap{display:flex;flex-direction:column;align-items:center;gap:16px;}
+.phone-label{
+  font-family:var(--cinzel);font-size:9px;letter-spacing:3px;
+  color:var(--tarnished);text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;
+}
+.phone-label::before,.phone-label::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,160,64,.2),transparent);
+}
+.phone{
+  width:280px;height:580px;background:var(--void);border-radius:36px;
+  border:1.5px solid rgba(200,160,64,.2);overflow:hidden;position:relative;
+  box-shadow:0 0 50px rgba(139,26,26,.12),0 30px 60px rgba(0,0,0,.7),
+             inset 0 1px 0 rgba(200,160,64,.08);
+  flex-shrink:0;
+}
+.phone::before{
+  content:'';position:absolute;top:12px;left:50%;transform:translateX(-50%);
+  width:80px;height:22px;background:var(--black);border-radius:11px;z-index:100;
+}
+.phone.wide{width:340px;height:600px;}
+
+/* ── STATUS BAR ── */
+.sb{height:42px;display:flex;align-items:flex-end;justify-content:space-between;
+   padding:0 18px 7px;background:var(--black);}
+.sb-t{font-family:var(--cinzel);font-size:9px;color:var(--dust);letter-spacing:1px;}
+.sb-i{font-size:8px;color:var(--dust);}
+
+/* ── APP HEADER ── */
+.ah{padding:2px 18px 14px;background:var(--black);position:relative;}
+.ah::after{content:'';position:absolute;bottom:0;left:14px;right:14px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,160,64,.5),rgba(139,26,26,.4),rgba(200,160,64,.5),transparent);}
+.ah-title{font-family:var(--rune);font-size:26px;color:var(--gold);
+  text-shadow:0 0 15px rgba(200,160,64,.35);letter-spacing:2px;}
+.ah-sub{font-family:var(--cinzel);font-size:7px;color:var(--dust);
+  letter-spacing:2px;text-transform:uppercase;margin-top:1px;}
+.ah-orn{position:absolute;right:18px;top:6px;font-size:22px;
+  color:var(--blood);opacity:.7;text-shadow:0 0 12px rgba(139,26,26,.5);}
+
+/* ── NAV ── */
+.nav{display:flex;background:#16213e;padding:0 10px;}
+.nav-t{flex:1;padding:8px 2px;text-align:center;font-family:var(--cinzel);
+  font-size:6px;letter-spacing:1px;color:var(--mist);text-transform:uppercase;
+  border-bottom:1.5px solid transparent;position:relative;}
+.nav-t.a{color:var(--gold);border-bottom-color:var(--gold);}
+.nav-t.a::after{content:'✦';position:absolute;bottom:-5px;left:50%;
+  transform:translateX(-50%);font-size:5px;color:var(--gold);}
+
+/* ── SHELF ── */
+.sh-sec{padding:12px 14px 0;}
+.sh-lbl{font-family:var(--cinzel);font-size:6px;letter-spacing:2px;
+  color:var(--tarnished);text-transform:uppercase;margin-bottom:8px;
+  display:flex;align-items:center;gap:6px;}
+.sh-lbl::after{content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,rgba(200,160,64,.2),transparent);}
+.shelf-unit{background:linear-gradient(180deg,#1a1008,#0a0803);
+  border-radius:3px 3px 0 0;padding:10px 10px 0;
+  border:1px solid rgba(100,70,20,.25);border-bottom:none;position:relative;}
+.shelf-unit::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--tarnished),var(--gold),var(--copper),var(--gold),var(--tarnished));
+  border-radius:3px 3px 0 0;}
+.books-r{display:flex;gap:4px;padding-bottom:10px;align-items:flex-end;min-height:80px;}
+.plank{height:11px;margin:0 -1px;
+  background:linear-gradient(180deg,#3d2810,#1f1205);
+  border-radius:0 0 3px 3px;border:1px solid rgba(100,70,20,.35);
+  border-top:2px solid rgba(80,50,10,.7);
+  box-shadow:0 4px 10px rgba(0,0,0,.6);}
+
+/* ── BOOK ── */
+.book{border-radius:2px 5px 5px 2px;position:relative;cursor:pointer;
+  box-shadow:2px 0 6px rgba(0,0,0,.5);}
+.book-sp{position:absolute;top:0;bottom:0;left:0;width:4px;
+  background:rgba(0,0,0,.3);border-radius:2px 0 0 2px;}
+.book-in{width:100%;height:100%;display:flex;flex-direction:column;
+  justify-content:space-between;padding:5px 4px 4px 7px;overflow:hidden;}
+.book-in::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:rgba(255,255,255,.06);}
+.book-sym{font-size:8px;color:rgba(200,160,64,.7);text-align:center;}
+.book-txt{font-family:var(--cinzel);font-size:5px;color:rgba(255,255,255,.85);
+  word-break:break-word;text-align:center;line-height:1.3;}
+.book-aut{font-size:4px;color:rgba(255,255,255,.4);font-style:italic;
+  text-align:center;margin-top:2px;}
+.add-tome{border:1px dashed rgba(200,160,64,.18);border-radius:4px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  color:rgba(200,160,64,.22);}
+.add-sym{font-size:14px;}
+.add-lbl{font-family:var(--cinzel);font-size:4px;letter-spacing:.5px;text-align:center;}
+
+/* ── FORMATS ── */
+.fmts{display:flex;flex-wrap:wrap;gap:4px;padding:8px 14px 14px;}
+.fmt{font-family:var(--cinzel);font-size:6px;letter-spacing:1.5px;
+  padding:3px 7px;border:1px solid rgba(139,26,26,.4);border-radius:2px;
+  color:var(--crimson);background:rgba(139,26,26,.07);text-transform:uppercase;}
+
+/* ── BOTTOM NAV ── */
+.bnav{display:flex;background:var(--black);
+  border-top:1px solid rgba(200,160,64,.08);}
+.bn{flex:1;padding:8px 4px 6px;text-align:center;}
+.bn-ic{font-size:14px;display:block;}
+.bn-lb{font-family:var(--cinzel);font-size:5.5px;letter-spacing:.8px;
+  color:var(--mist);margin-top:2px;text-transform:uppercase;}
+.bn.a .bn-lb{color:var(--gold);}
+.bn.a{position:relative;}
+.bn.a::before{content:'';position:absolute;top:0;left:20%;right:20%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+
+/* ── READER SCREEN ── */
+.rh{background:var(--black);padding:6px 14px 10px;}
+.rh-back{display:flex;align-items:center;gap:6px;margin-bottom:8px;}
+.rh-back-arr{color:var(--gold);font-size:12px;}
+.rh-back-lbl{font-family:var(--cinzel);font-size:6px;letter-spacing:1.5px;
+  color:var(--dust);text-transform:uppercase;}
+.rh-mode{margin-left:auto;border:1px solid rgba(200,160,64,.2);
+  border-radius:2px;padding:3px 8px;
+  font-family:var(--cinzel);font-size:5.5px;color:var(--dust);letter-spacing:.5px;}
+.rh-title{font-family:var(--cinzel);font-size:11px;color:var(--bone);}
+.rh-meta{font-family:var(--fell);font-size:8px;color:var(--mist);
+  font-style:italic;margin-top:1px;}
+.ch-strip{background:rgba(200,160,64,.04);border-bottom:1px solid rgba(200,160,64,.08);
+  display:flex;gap:6px;padding:6px 12px;overflow:hidden;}
+.ch-item{font-family:var(--cinzel);font-size:6px;letter-spacing:.8px;
+  padding:3px 8px;border:1px solid rgba(200,160,64,.12);border-radius:2px;
+  color:var(--dust);white-space:nowrap;text-transform:uppercase;}
+.ch-item.a{border-color:rgba(200,160,64,.4);color:var(--gold);}
+.speed-bar{background:rgba(200,160,64,.04);padding:7px 16px;
+  display:flex;align-items:center;gap:8px;
+  border-bottom:1px solid rgba(200,160,64,.08);}
+.sp-lbl{font-family:var(--cinzel);font-size:6px;letter-spacing:1.5px;
+  color:var(--dust);text-transform:uppercase;white-space:nowrap;}
+.sp-track{flex:1;height:1.5px;background:rgba(200,160,64,.15);
+  border-radius:1px;position:relative;}
+.sp-fill{height:1.5px;background:var(--gold);border-radius:1px;width:30%;}
+.sp-thumb{width:10px;height:10px;background:var(--gold);border-radius:50%;
+  position:absolute;top:-4px;left:30%;
+  box-shadow:0 0 6px rgba(200,160,64,.4);}
+.sp-val{font-family:var(--cinzel);font-size:10px;color:var(--gold);}
+
+/* ── RSVP CHAMBER ── */
+.rsvp-area{flex:1;background:var(--void);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:12px 16px;position:relative;}
+.rsvp-orn-t{font-family:var(--cinzel);font-size:7px;letter-spacing:5px;
+  color:rgba(200,160,64,.2);margin-bottom:8px;}
+.rsvp-guide{width:1px;height:22px;background:linear-gradient(180deg,transparent,rgba(139,26,26,.5),transparent);}
+.rsvp-frame{padding:16px 24px;border:1px solid rgba(200,160,64,.08);
+  background:rgba(0,0,0,.25);position:relative;}
+.rsvp-frame::before{content:'❧';position:absolute;top:-6px;left:50%;
+  transform:translateX(-50%) rotate(180deg);font-size:10px;
+  color:rgba(200,160,64,.2);}
+.rsvp-frame::after{content:'❧';position:absolute;bottom:-6px;left:50%;
+  transform:translateX(-50%);font-size:10px;color:rgba(200,160,64,.2);}
+.rsvp-word{font-family:var(--fell);font-size:34px;color:var(--bone);
+  text-align:center;letter-spacing:2px;min-height:44px;line-height:1.2;}
+.rsvp-word .orp{color:var(--crimson);text-shadow:0 0 10px rgba(178,32,32,.6);}
+.rsvp-meta{width:100%;margin-top:14px;}
+.rsvp-prog-track{height:1.5px;background:rgba(200,160,64,.1);border-radius:1px;}
+.rsvp-prog-fill{height:1.5px;border-radius:1px;
+  background:linear-gradient(90deg,var(--blood),var(--gold));}
+.rsvp-counters{display:flex;justify-content:space-between;margin-top:5px;
+  font-family:var(--cinzel);font-size:6px;letter-spacing:.8px;color:var(--mist);}
+.rsvp-orn-b{font-size:7px;color:rgba(200,160,64,.15);letter-spacing:4px;margin-top:6px;}
+.ctrl-bar{background:var(--black);padding:10px 16px 12px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  border-top:1px solid rgba(200,160,64,.1);}
+.ctrl{background:rgba(200,160,64,.05);border:1px solid rgba(200,160,64,.15);
+  color:var(--dust);border-radius:50%;width:30px;height:30px;
+  display:flex;align-items:center;justify-content:center;font-size:10px;}
+.ctrl.play{width:42px;height:42px;font-size:16px;
+  background:linear-gradient(135deg,var(--blood),#5a0a0a);
+  border-color:rgba(200,64,64,.4);color:var(--bone);
+  box-shadow:0 0 18px rgba(139,26,26,.4);}
+
+/* ── SCROLL READER ── */
+.scroll-body{flex:1;padding:12px 18px;overflow:hidden;
+  background:var(--void);position:relative;}
+.scroll-body::before,.scroll-body::after{
+  content:'';position:absolute;left:0;right:0;height:30px;
+  background:linear-gradient(180deg,var(--void),transparent);z-index:2;}
+.scroll-body::after{top:auto;bottom:0;
+  background:linear-gradient(0deg,var(--void),transparent);}
+.scroll-chapter{font-family:var(--cinzel);font-size:11px;color:var(--gold);
+  text-align:center;margin:10px 0 6px;letter-spacing:.5px;}
+.scroll-line{height:1px;margin:5px 0;
+  background:linear-gradient(90deg,transparent,rgba(200,160,64,.25),transparent);}
+.scroll-sym{text-align:center;font-size:9px;color:rgba(200,160,64,.4);margin-bottom:8px;}
+.scroll-text{font-family:var(--fell);font-size:11px;color:var(--bone);
+  line-height:1.75;text-align:justify;letter-spacing:.1px;}
+.scroll-bm{color:var(--crimson);font-size:9px;margin-right:3px;opacity:.7;}
+.scroll-prog{height:1.5px;background:linear-gradient(90deg,var(--blood),var(--gold));
+  border-radius:1px;}
+
+/* ── STATS SCREEN ── */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:10px 12px 0;}
+.stat-stone{background:linear-gradient(135deg,#1a1008,#0f0a04);
+  border:1px solid rgba(200,160,64,.12);border-radius:4px;padding:10px;}
+.stat-stone::before{content:attr(data-s);font-size:11px;
+  color:var(--tarnished);display:block;margin-bottom:5px;}
+.stat-num{font-family:var(--cinzel);font-size:20px;color:var(--gold);line-height:1;}
+.stat-unit{font-family:var(--cinzel);font-size:6px;letter-spacing:1.5px;
+  color:var(--mist);text-transform:uppercase;margin-top:2px;}
+.stat-lbl{font-family:var(--fell);font-size:8px;color:var(--dust);
+  font-style:italic;margin-top:4px;}
+.hist-head{font-family:var(--cinzel);font-size:6px;letter-spacing:2px;
+  color:var(--tarnished);text-transform:uppercase;
+  padding:8px 12px 5px;border-bottom:1px solid rgba(200,160,64,.07);}
+.hist-row{display:flex;align-items:center;gap:8px;padding:7px 12px;
+  border-bottom:1px solid rgba(255,255,255,.03);}
+.hist-tome{width:26px;height:36px;border-radius:2px 4px 4px 2px;
+  display:flex;align-items:center;justify-content:center;font-size:12px;}
+.hist-name{font-family:var(--fell);font-size:9px;color:var(--bone);}
+.hist-meta{font-family:var(--cinzel);font-size:6px;letter-spacing:.8px;
+  color:var(--mist);text-transform:uppercase;margin-top:2px;}
+.hist-wpm{font-family:var(--cinzel);font-size:11px;color:var(--gold);margin-left:auto;}
+
+/* ── SETTINGS SCREEN ── */
+.sg-title{font-family:var(--cinzel);font-size:6px;letter-spacing:2px;
+  color:var(--tarnished);text-transform:uppercase;padding:10px 14px 6px;
+  border-bottom:1px solid rgba(200,160,64,.07);}
+.lang-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:8px 12px;}
+.lang-tile{border:1px solid rgba(200,160,64,.1);border-radius:3px;padding:5px 3px;
+  text-align:center;}
+.lang-tile.a{border-color:var(--gold);background:rgba(200,160,64,.07);}
+.lang-flag{font-size:13px;display:block;margin-bottom:2px;}
+.lang-code{font-family:var(--cinzel);font-size:7px;color:var(--dust);}
+.lang-tile.a .lang-code{color:var(--gold);}
+.set-row{display:flex;align-items:center;justify-content:space-between;
+  padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.03);}
+.set-name{font-family:var(--fell);font-size:10px;color:var(--bone);}
+.set-hint{font-size:8px;color:var(--mist);font-style:italic;margin-top:1px;}
+.toggle{width:32px;height:18px;border-radius:9px;position:relative;}
+.toggle.on{background:rgba(139,26,26,.45);border:1px solid rgba(200,64,64,.35);}
+.toggle.off{background:rgba(255,255,255,.08);border:1px solid rgba(200,160,64,.12);}
+.toggle::after{content:'';width:12px;height:12px;border-radius:50%;
+  position:absolute;top:2px;transition:.2s;}
+.toggle.on::after{right:2px;background:var(--scarlet);
+  box-shadow:0 0 6px rgba(200,32,32,.5);}
+.toggle.off::after{left:2px;background:var(--mist);}
+
+/* ── BOOKMARK PANEL ── */
+.bm-panel{background:var(--deep);flex:1;display:flex;flex-direction:column;}
+.bm-head{background:var(--black);padding:8px 14px 10px;
+  display:flex;align-items:center;gap:8px;
+  border-bottom:1px solid rgba(200,160,64,.1);}
+.bm-head-title{font-family:var(--cinzel);font-size:11px;color:var(--bone);flex:1;}
+.bm-row{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.04);
+  display:flex;gap:8px;align-items:flex-start;}
+.bm-ribbon{width:20px;height:28px;background:var(--blood);
+  border-radius:0 0 4px 4px;display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;}
+.bm-ribbon-ic{font-size:7px;color:var(--parchment);}
+.bm-text{font-family:var(--fell);font-size:9px;color:var(--bone);
+  line-height:1.4;flex:1;}
+.bm-date{font-family:var(--cinzel);font-size:6px;letter-spacing:.8px;
+  color:var(--mist);margin-top:3px;text-transform:uppercase;}
+
+/* ── MODE PICKER ── */
+.mode-sheet{background:var(--deep);padding:16px 14px 20px;
+  border-top:1px solid rgba(200,160,64,.15);border-radius:16px 16px 0 0;}
+.mode-handle{width:30px;height:2px;background:rgba(255,255,255,.15);
+  border-radius:1px;margin:0 auto 14px;}
+.mode-sub{font-family:var(--fell);font-size:9px;color:var(--mist);
+  font-style:italic;text-align:center;margin-bottom:14px;}
+.mode-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.mode-card{padding:14px;border-radius:4px;text-align:center;}
+.mode-card.rsvp{border:1px solid rgba(139,26,26,.3);
+  background:rgba(139,26,26,.07);}
+.mode-card.scroll{border:1px solid rgba(138,108,40,.3);
+  background:rgba(138,108,40,.06);}
+.mode-ic{font-size:22px;display:block;margin-bottom:6px;}
+.mode-title{font-family:var(--cinzel);font-size:10px;color:var(--bone);}
+.mode-desc{font-family:var(--fell);font-size:8px;color:var(--mist);
+  font-style:italic;margin-top:4px;}
+
+/* ── LABEL BADGES ── */
+.badge-row{display:flex;gap:6px;flex-wrap:wrap;
+  justify-content:center;margin-top:10px;}
+.badge{font-family:var(--cinzel);font-size:8px;letter-spacing:1.5px;
+  padding:3px 10px;border-radius:2px;text-transform:uppercase;}
+.badge-g{border:1px solid rgba(200,160,64,.35);color:var(--gold);
+  background:rgba(200,160,64,.08);}
+.badge-b{border:1px solid rgba(139,26,26,.35);color:var(--scarlet);
+  background:rgba(139,26,26,.08);}
+
+/* ── SECTION DIVIDER ── */
+.sec-div{display:flex;align-items:center;gap:10px;
+  margin:40px 0 28px;padding:0 4px;}
+.sec-div-line{flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,160,64,.3),transparent);}
+.sec-div-text{font-family:var(--cinzel);font-size:9px;letter-spacing:3px;
+  color:var(--tarnished);text-transform:uppercase;white-space:nowrap;}
+
+/* ── SCROLL BOTTOM BAR ── */
+.scroll-btbar{background:rgba(8,6,8,.9);padding:8px 14px 10px;
+  display:flex;justify-content:space-around;border-top:1px solid rgba(200,160,64,.08);}
+.sbt-btn{text-align:center;}
+.sbt-ic{font-size:14px;display:block;}
+.sbt-lb{font-family:var(--cinzel);font-size:5.5px;letter-spacing:.5px;
+  color:var(--mist);text-transform:uppercase;margin-top:2px;}
+.sbt-btn.a .sbt-lb{color:var(--gold);}
+
+/* ── CORNER ORNAMENTS ── */
+.corners{position:absolute;inset:0;pointer-events:none;z-index:3;}
+.c{position:absolute;width:28px;height:28px;
+  border-color:rgba(200,160,64,.25);border-style:solid;}
+.c-tl{top:6px;left:6px;border-width:1.5px 0 0 1.5px;}
+.c-tr{top:6px;right:6px;border-width:1.5px 1.5px 0 0;}
+.c-bl{bottom:6px;left:6px;border-width:0 0 1.5px 1.5px;}
+.c-br{bottom:6px;right:6px;border-width:0 1.5px 1.5px 0;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title">GrimRead</div>
+  <div class="page-sub">∴ Gothic Speed Reader · Flutter Source Code · Android & iOS ∴</div>
+
+  <!-- ══════ ROW 1: LIBRARY + READER ══════ -->
+  <div class="grid">
+
+    <!-- SCREEN 1: Library -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="corners"><div class="c c-tl"></div><div class="c c-tr"></div><div class="c c-bl"></div><div class="c c-br"></div></div>
+        <div class="sb"><span class="sb-t">XXIII·IV</span><div class="sb-i">☽ ⚡ ▪▪▪</div></div>
+        <div class="ah">
+          <div class="ah-title">GrimRead</div>
+          <div class="ah-sub">∴ Tome of Speed Reading ∴</div>
+          <div class="ah-orn">☩</div>
+        </div>
+        <div class="nav">
+          <div class="nav-t a">Tomes</div><div class="nav-t">Read</div>
+          <div class="nav-t">Annals</div><div class="nav-t">Rites</div>
+        </div>
+        <div style="flex:1;overflow:hidden;background:#0a0710;">
+          <div class="sh-sec">
+            <div class="sh-lbl">∴ Recently Opened ∴</div>
+            <div class="shelf-unit">
+              <div class="books-r">
+                <div class="book" style="width:38px;height:76px;background:linear-gradient(160deg,#5a0f0f,#3d0a0a);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">⛧</div><div><div class="book-txt">Мастер и Маргарита</div><div class="book-aut">Булгаков</div></div></div></div>
+                <div class="book" style="width:36px;height:70px;background:linear-gradient(160deg,#0a1a3a,#060f24);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">✦</div><div><div class="book-txt">1984</div><div class="book-aut">Оруэлл</div></div></div></div>
+                <div class="book" style="width:40px;height:78px;background:linear-gradient(160deg,#2a0f35,#1a0820);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">❧</div><div><div class="book-txt">Преступление и Наказание</div><div class="book-aut">Достоевский</div></div></div></div>
+                <div class="book" style="width:36px;height:72px;background:linear-gradient(160deg,#0d2b1a,#081a10);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">⚜</div><div><div class="book-txt">Война и Мир</div><div class="book-aut">Толстой</div></div></div></div>
+                <div class="book" style="width:34px;height:68px;background:linear-gradient(160deg,#2a1f08,#1a1205);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">☽</div><div><div class="book-txt">Идиот</div><div class="book-aut">Достоевский</div></div></div></div>
+                <div class="add-tome" style="width:34px;height:68px;">
+                  <div class="add-sym">✚</div><div class="add-lbl">Add<br>Tome</div></div>
+              </div>
+            </div>
+            <div class="plank"></div>
+          </div>
+          <div class="sh-sec" style="margin-top:8px;">
+            <div class="sh-lbl">∴ Sacred Texts ∴</div>
+            <div class="shelf-unit">
+              <div class="books-r">
+                <div class="book" style="width:38px;height:74px;background:linear-gradient(160deg,#1a1820,#0f0e14);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">♱</div><div><div class="book-txt">Фауст</div><div class="book-aut">Гёте</div></div></div></div>
+                <div class="book" style="width:36px;height:70px;background:linear-gradient(160deg,#8b1a1a,#5a0a0a);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">⛧</div><div><div class="book-txt">Дракула</div><div class="book-aut">Стокер</div></div></div></div>
+                <div class="book" style="width:38px;height:72px;background:linear-gradient(160deg,#2a1408,#1a0d05);">
+                  <div class="book-sp"></div><div class="book-in">
+                  <div class="book-sym">⚜</div><div><div class="book-txt">Монте-Кристо</div><div class="book-aut">Дюма</div></div></div></div>
+                <div class="add-tome" style="width:34px;height:68px;">
+                  <div class="add-sym">✚</div><div class="add-lbl">Add<br>Tome</div></div>
+              </div>
+            </div>
+            <div class="plank"></div>
+          </div>
+          <div class="fmts">
+            <span class="fmt">TXT</span><span class="fmt">FB2</span><span class="fmt">EPUB</span>
+            <span class="fmt">PDF</span><span class="fmt">DOCX</span><span class="fmt">RTF</span><span class="fmt">MOBI</span>
+          </div>
+        </div>
+        <div class="bnav">
+          <div class="bn a"><span class="bn-ic">📚</span><div class="bn-lb">Library</div></div>
+          <div class="bn"><span class="bn-ic">👁</span><div class="bn-lb">Read</div></div>
+          <div class="bn"><span class="bn-ic">☽</span><div class="bn-lb">Annals</div></div>
+          <div class="bn"><span class="bn-ic">⚙</span><div class="bn-lb">Rites</div></div>
+        </div>
+      </div>
+      <div class="phone-label">Gothic Library · Wooden Shelves</div>
+      <div class="badge-row"><span class="badge badge-g">Screen 1/6</span><span class="badge badge-b">Library</span></div>
+    </div>
+
+    <!-- SCREEN 2: RSVP Reader -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="corners"><div class="c c-tl"></div><div class="c c-tr"></div><div class="c c-bl"></div><div class="c c-br"></div></div>
+        <div class="sb" style="background:var(--black)"><span class="sb-t">XXIII·IV</span><div class="sb-i">☽ ▪▪▪</div></div>
+        <div class="rh">
+          <div class="rh-back">
+            <span class="rh-back-arr">←</span>
+            <span class="rh-back-lbl">Return to Library</span>
+            <span class="rh-mode">📜 Scroll</span>
+          </div>
+          <div class="rh-title">Мастер и Маргарита</div>
+          <div class="rh-meta">Михаил Булгаков · Chapter III</div>
+        </div>
+        <div class="ch-strip">
+          <div class="ch-item">Prologue</div><div class="ch-item">I</div>
+          <div class="ch-item">II</div><div class="ch-item a">III</div>
+          <div class="ch-item">IV</div><div class="ch-item">V</div>
+        </div>
+        <div class="speed-bar">
+          <span class="sp-lbl">Pace</span>
+          <div class="sp-track"><div class="sp-fill"></div><div class="sp-thumb"></div></div>
+          <span class="sp-val">300 w/m</span>
+        </div>
+        <div class="rsvp-area">
+          <div class="rsvp-orn-t">· · · ∴ · · ·</div>
+          <div class="rsvp-guide"></div>
+          <div class="rsvp-frame">
+            <div class="rsvp-word">&nbsp;ж<span class="orp">и</span>л&nbsp;</div>
+          </div>
+          <div class="rsvp-guide"></div>
+          <div class="rsvp-meta">
+            <div class="rsvp-prog-track">
+              <div class="rsvp-prog-fill" style="width:23%"></div></div>
+            <div class="rsvp-counters">
+              <span>Word 47 / 1,204</span><span>~18 min</span></div>
+          </div>
+          <div class="rsvp-orn-b">· ⁂ ·</div>
+        </div>
+        <div class="ctrl-bar">
+          <div class="ctrl">⏮</div><div class="ctrl">◀</div>
+          <div class="ctrl play">⏸</div>
+          <div class="ctrl">▶</div><div class="ctrl">⏭</div>
+        </div>
+      </div>
+      <div class="phone-label">RSVP Mode · ORP Focus Mark</div>
+      <div class="badge-row"><span class="badge badge-g">Screen 2/6</span><span class="badge badge-b">Speed Reader</span></div>
+    </div>
+
+    <!-- SCREEN 3: Scroll Reader -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="corners"><div class="c c-tl"></div><div class="c c-tr"></div><div class="c c-bl"></div><div class="c c-br"></div></div>
+        <div class="sb" style="background:var(--black)"><span class="sb-t">XXIII·IV</span><div class="sb-i">☽ ▪▪▪</div></div>
+        <!-- Scroll reader top bar -->
+        <div style="background:rgba(8,6,8,.92);padding:6px 14px 8px;border-bottom:1px solid rgba(200,160,64,.08);">
+          <div class="rh-back" style="margin-bottom:5px;">
+            <span class="rh-back-arr">←</span>
+            <span class="rh-back-lbl">Library</span>
+            <span style="margin-left:auto;display:flex;gap:5px;">
+              <span class="rh-mode">❧</span>
+              <span class="rh-mode">⚡ RSVP</span>
+            </span>
+          </div>
+          <div class="rh-title" style="font-size:10px;">Мастер и Маргарита</div>
+          <div style="margin-top:5px;">
+            <div class="rsvp-prog-track"><div class="rsvp-prog-fill" style="width:38%"></div></div>
+            <div class="rsvp-counters" style="margin-top:3px;"><span>38%</span><span>28,412 words</span></div>
+          </div>
+        </div>
+        <!-- Scroll text -->
+        <div class="scroll-body" style="display:flex;flex-direction:column;">
+          <div class="scroll-chapter">Chapter III</div>
+          <div class="scroll-line"></div>
+          <div class="scroll-sym">✦</div>
+          <div class="scroll-text">
+            <span class="scroll-bm">❧</span>В ту ночь Москва спала тревожным сном, пока над куполами церквей сгущались тёмные тучи и Воланд шёл по узким улочкам Арбата — невидимый для смертных, но ощутимый, как холодный ветер с запахом серы. Мастер смотрел в окно и думал о своём романе...
+          </div>
+          <div style="margin-top:8px;" class="scroll-text">
+            Маргарита знала: этой ночью всё изменится. Она держала в руках рукопись и чувствовала, как буквы на пожелтевших страницах начинают светиться тусклым золотым светом...
+          </div>
+        </div>
+        <div style="background:rgba(8,6,8,.92);padding:3px 0 5px;">
+          <div class="scroll-prog" style="width:38%;margin:0 14px 6px;"></div>
+        </div>
+        <div class="scroll-btbar">
+          <div class="sbt-btn"><span class="sbt-ic">❧</span><div class="sbt-lb">Contents</div></div>
+          <div class="sbt-btn a"><span class="sbt-ic">✦</span><div class="sbt-lb">Marked</div></div>
+          <div class="sbt-btn"><span class="sbt-ic">📖</span><div class="sbt-lb">Bookmarks</div></div>
+          <div class="sbt-btn"><span class="sbt-ic">⚙</span><div class="sbt-lb">Appearance</div></div>
+        </div>
+      </div>
+      <div class="phone-label">Scroll Mode · Parchment Reading</div>
+      <div class="badge-row"><span class="badge badge-g">Screen 3/6</span><span class="badge badge-b">Scroll Reader</span></div>
+    </div>
+  </div>
+
+  <div class="sec-div">
+    <div class="sec-div-line"></div>
+    <div class="sec-div-text">∴ More Screens ∴</div>
+    <div class="sec-div-line"></div>
+  </div>
+
+  <!-- ══════ ROW 2: STATS + SETTINGS + BOOKMARKS ══════ -->
+  <div class="grid">
+
+    <!-- SCREEN 4: Statistics -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="corners"><div class="c c-tl"></div><div class="c c-tr"></div><div class="c c-bl"></div><div class="c c-br"></div></div>
+        <div class="sb" style="background:var(--black)"><span class="sb-t">XXIII·IV</span><div class="sb-i">☽ ▪▪▪</div></div>
+        <div class="ah" style="padding-bottom:12px;">
+          <div class="ah-title" style="font-size:22px;">Annals</div>
+          <div class="ah-sub">∴ Chronicles of Reading ∴</div>
+        </div>
+        <div class="nav">
+          <div class="nav-t">Tomes</div><div class="nav-t">Read</div>
+          <div class="nav-t a">Annals</div><div class="nav-t">Rites</div>
+        </div>
+        <div style="flex:1;overflow:hidden;background:#0a0710;">
+          <div class="stat-grid">
+            <div class="stat-stone" data-s="⚡"><div class="stat-num">312</div><div class="stat-unit">Words/Min</div><div class="stat-lbl">Average pace</div></div>
+            <div class="stat-stone" data-s="📜"><div class="stat-num">87k</div><div class="stat-unit">Words Read</div><div class="stat-lbl">Lifetime total</div></div>
+            <div class="stat-stone" data-s="📚"><div class="stat-num">3</div><div class="stat-unit">Tomes</div><div class="stat-lbl">Completed</div></div>
+            <div class="stat-stone" data-s="☽"><div class="stat-num">7</div><div class="stat-unit">Day Vigil</div><div class="stat-lbl">Current streak</div></div>
+          </div>
+          <div class="hist-head">∴ Recent Sessions ∴</div>
+          <div class="hist-row">
+            <div class="hist-tome" style="background:linear-gradient(135deg,#5a0f0f,#3d0a0a);">📕</div>
+            <div><div class="hist-name">Мастер и Маргарита</div><div class="hist-meta">Today · 18 min · Ch. III</div></div>
+            <div class="hist-wpm">340</div>
+          </div>
+          <div class="hist-row">
+            <div class="hist-tome" style="background:linear-gradient(135deg,#0a1a3a,#060f24);">📘</div>
+            <div><div class="hist-name">1984</div><div class="hist-meta">Yesterday · 24 min</div></div>
+            <div class="hist-wpm">295</div>
+          </div>
+          <div class="hist-row">
+            <div class="hist-tome" style="background:linear-gradient(135deg,#2a0f35,#1a0820);">📗</div>
+            <div><div class="hist-name">Преступление и Наказание</div><div class="hist-meta">2 days ago · 31 min</div></div>
+            <div class="hist-wpm">280</div>
+          </div>
+        </div>
+        <div class="bnav">
+          <div class="bn"><span class="bn-ic">📚</span><div class="bn-lb">Library</div></div>
+          <div class="bn"><span class="bn-ic">👁</span><div class="bn-lb">Read</div></div>
+          <div class="bn a"><span class="bn-ic">☽</span><div class="bn-lb">Annals</div></div>
+          <div class="bn"><span class="bn-ic">⚙</span><div class="bn-lb">Rites</div></div>
+        </div>
+      </div>
+      <div class="phone-label">Statistics · Illuminated Stones</div>
+      <div class="badge-row"><span class="badge badge-g">Screen 4/6</span><span class="badge badge-b">Analytics</span></div>
+    </div>
+
+    <!-- SCREEN 5: Settings with Language Grid -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="corners"><div class="c c-tl"></div><div class="c c-tr"></div><div class="c c-bl"></div><div class="c c-br"></div></div>
+        <div class="sb" style="background:var(--black)"><span class="sb-t">XXIII·IV</span><div class="sb-i">☽ ▪▪▪</div></div>
+        <div class="ah" style="padding-bottom:12px;">
+          <div class="ah-title" style="font-size:22px;">Rites</div>
+          <div class="ah-sub">∴ Configure Your Grimoire ∴</div>
+        </div>
+        <div class="nav">
+          <div class="nav-t">Tomes</div><div class="nav-t">Read</div>
+          <div class="nav-t">Annals</div><div class="nav-t a">Rites</div>
+        </div>
+        <div style="flex:1;overflow:hidden;background:#0a0710;">
+          <div class="sg-title">∴ Tongue of Incantation ∴</div>
+          <div class="lang-grid">
+            <div class="lang-tile a"><span class="lang-flag">🇷🇺</span><span class="lang-code">RU</span></div>
+            <div class="lang-tile"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span></div>
+            <div class="lang-tile"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span></div>
+            <div class="lang-tile"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span></div>
+            <div class="lang-tile"><span class="lang-flag">🇵🇹</span><span class="lang-code">PT</span></div>
+            <div class="lang-tile"><span class="lang-flag">🇮🇹</span><span class="lang-code">IT</span></div>
+            <div class="lang-tile"><span class="lang-flag">🇫🇷</span><span class="lang-code">FR</span></div>
+            <div class="lang-tile"><span class="lang-flag">🇺🇦</span><span class="lang-code">UA</span></div>
+          </div>
+          <div class="sg-title" style="margin-top:6px;">∴ Reading Rituals ∴</div>
+          <div class="set-row">
+            <div><div class="set-name">RSVP Mode</div><div class="set-hint">Word-by-word conjuration</div></div>
+            <div class="toggle on"></div>
+          </div>
+          <div class="set-row">
+            <div><div class="set-name">ORP Focus Mark</div><div class="set-hint">Crimson recognition point</div></div>
+            <div class="toggle on"></div>
+          </div>
+          <div class="set-row">
+            <div><div class="set-name">Punctuation Pause</div><div class="set-hint">Breathe at sigils</div></div>
+            <div class="toggle on"></div>
+          </div>
+          <div class="set-row">
+            <div><div class="set-name">Chapter Scroll Mode</div><div class="set-hint">Traditional parchment view</div></div>
+            <div class="toggle off"></div>
+          </div>
+        </div>
+        <div class="bnav">
+          <div class="bn"><span class="bn-ic">📚</span><div class="bn-lb">Library</div></div>
+          <div class="bn"><span class="bn-ic">👁</span><div class="bn-lb">Read</div></div>
+          <div class="bn"><span class="bn-ic">☽</span><div class="bn-lb">Annals</div></div>
+          <div class="bn a"><span class="bn-ic">⚙</span><div class="bn-lb">Rites</div></div>
+        </div>
+      </div>
+      <div class="phone-label">8 Languages · Gothic Settings</div>
+      <div class="badge-row"><span class="badge badge-g">Screen 5/6</span><span class="badge badge-b">Settings</span></div>
+    </div>
+
+    <!-- SCREEN 6: Bookmarks + Mode Picker -->
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="corners"><div class="c c-tl"></div><div class="c c-tr"></div><div class="c c-bl"></div><div class="c c-br"></div></div>
+        <div class="sb" style="background:var(--black)"><span class="sb-t">XXIII·IV</span><div class="sb-i">☽ ▪▪▪</div></div>
+        <!-- Partial scroll reader visible -->
+        <div style="background:rgba(8,6,8,.92);padding:6px 14px 8px;border-bottom:1px solid rgba(200,160,64,.08);">
+          <div class="rh-title" style="font-size:10px;">Мастер и Маргарита</div>
+          <div style="margin-top:4px;"><div class="rsvp-prog-track"><div class="rsvp-prog-fill" style="width:38%"></div></div></div>
+        </div>
+        <div style="flex:1;overflow:hidden;display:flex;position:relative;">
+          <!-- Background text -->
+          <div style="position:absolute;inset:0;padding:10px 16px;opacity:.3;">
+            <div class="scroll-text" style="font-size:10px;">В ту ночь Москва спала тревожным сном, пока над куполами сгущались тёмные тучи...</div>
+          </div>
+          <!-- Bookmarks panel overlay -->
+          <div style="position:absolute;top:0;right:0;bottom:0;width:78%;display:flex;flex-direction:column;">
+            <div class="bm-panel">
+              <div class="bm-head">
+                <span style="font-size:16px;color:rgba(139,26,26,.7);">☩</span>
+                <span class="bm-head-title">Bookmarks</span>
+                <span style="font-family:var(--cinzel);font-size:10px;color:var(--dust);">✕</span>
+              </div>
+              <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(200,160,64,.35),rgba(139,26,26,.25),transparent);"></div>
+              <div class="bm-row">
+                <div class="bm-ribbon"><span class="bm-ribbon-ic">✦</span></div>
+                <div>
+                  <div class="bm-text">...Воланд шёл по узким улочкам Арбата невидимый для смертных...</div>
+                  <div class="bm-date">Today · Ch. III</div>
+                </div>
+              </div>
+              <div class="bm-row">
+                <div class="bm-ribbon"><span class="bm-ribbon-ic">✦</span></div>
+                <div>
+                  <div class="bm-text">...Мастер смотрел в окно и думал о своём романе, который сожгли...</div>
+                  <div class="bm-date">Yesterday · Ch. I</div>
+                </div>
+              </div>
+              <div class="bm-row">
+                <div class="bm-ribbon"><span class="bm-ribbon-ic">✦</span></div>
+                <div>
+                  <div class="bm-text">...Маргарита знала: этой ночью всё изменится навсегда...</div>
+                  <div class="bm-date">2 days ago · Ch. V</div>
+                </div>
+              </div>
+              <!-- Mode picker sheet peeking -->
+              <div style="margin-top:auto;">
+                <div class="mode-sheet">
+                  <div class="mode-handle"></div>
+                  <div class="mode-sub">Choose reading mode</div>
+                  <div class="mode-cards">
+                    <div class="mode-card rsvp">
+                      <span class="mode-ic">⚡</span>
+                      <div class="mode-title">RSVP</div>
+                      <div class="mode-desc">Word-by-word speed reading</div>
+                    </div>
+                    <div class="mode-card scroll">
+                      <span class="mode-ic">📜</span>
+                      <div class="mode-title">Scroll</div>
+                      <div class="mode-desc">Traditional parchment reading</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-label">Bookmarks · Mode Picker</div>
+      <div class="badge-row"><span class="badge badge-g">Screen 6/6</span><span class="badge badge-b">Bookmarks</span></div>
+    </div>
+
+  </div><!-- /grid row 2 -->
+
+  <!-- ══════ FEATURE BADGES ══════ -->
+  <div class="sec-div">
+    <div class="sec-div-line"></div>
+    <div class="sec-div-text">∴ What's Included ∴</div>
+    <div class="sec-div-line"></div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:40px;">
+    <span class="badge badge-g">Flutter Source Code</span>
+    <span class="badge badge-b">Android + iOS</span>
+    <span class="badge badge-g">RSVP Engine</span>
+    <span class="badge badge-b">ORP Technology</span>
+    <span class="badge badge-g">Gothic Library UI</span>
+    <span class="badge badge-b">Scroll Reader</span>
+    <span class="badge badge-g">Bookmarks + Notes</span>
+    <span class="badge badge-b">8 Languages</span>
+    <span class="badge badge-g">SQLite Database</span>
+    <span class="badge badge-b">7 File Formats</span>
+    <span class="badge badge-g">Reading Statistics</span>
+    <span class="badge badge-b">Chapter Navigation</span>
+    <span class="badge badge-g">Font Customization</span>
+    <span class="badge badge-b">Day Streak Tracking</span>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>

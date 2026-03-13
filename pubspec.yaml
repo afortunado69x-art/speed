@@ -1,0 +1,74 @@
+name: grimread
+description: GrimRead — Gothic Speed Reader. RSVP reading app with medieval library design.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # File picking & permissions
+  file_picker: ^6.1.1
+  permission_handler: ^11.1.0
+
+  # Book format parsers
+  epub_view: ^4.2.0
+  syncfusion_flutter_pdf: ^24.1.41
+
+  # Storage
+  sqflite: ^2.3.0
+  path_provider: ^2.1.2
+  shared_preferences: ^2.2.2
+
+  # UI
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+  percent_indicator: ^4.2.3
+  animations: ^2.0.8
+
+  # Utils
+  path: ^1.8.3
+  intl: ^0.19.0
+  rxdart: ^0.27.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/sample_books/
+
+  fonts:
+    - family: CinzelDecorative
+      fonts:
+        - asset: assets/fonts/CinzelDecorative-Regular.ttf
+        - asset: assets/fonts/CinzelDecorative-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/CinzelDecorative-Black.ttf
+          weight: 900
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel-Regular.ttf
+        - asset: assets/fonts/Cinzel-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cinzel-Bold.ttf
+          weight: 700
+    - family: IMFellEnglish
+      fonts:
+        - asset: assets/fonts/IMFellEnglish-Regular.ttf
+        - asset: assets/fonts/IMFellEnglish-Italic.ttf
+          style: italic
+    - family: UnifrakturMaguntia
+      fonts:
+        - asset: assets/fonts/UnifrakturMaguntia-Book.ttf
